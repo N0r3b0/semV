@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Publishers List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e2e2e2;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h2>Publishers List</h2>
+    <ul>
+        <li><a href="/new_publisher">Create New Publisher</a></li>
+    </ul>
+    <br/><br/>
+    <table>
+        <thead>
+        <tr>
+            <th>Publisher Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="publisher : ${publishers}">
+            <td th:text="${publisher.idp}">Publisher ID</td>
+            <td th:text="${publisher.name}">Name</td>
+            <td th:text="${publisher.address}">Address</td>
+            <td>
+                <a th:href="@{'/edit_publisher/' + ${publisher.idp}}">Edit</a>
+                &nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/delete_publisher/' + ${publisher.idp}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
