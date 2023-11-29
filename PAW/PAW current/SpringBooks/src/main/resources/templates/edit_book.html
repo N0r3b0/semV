@@ -73,12 +73,20 @@
                 <td><input type="text" th:field="*{title}" /></td>
             </tr>
             <tr>
-                <td>Publisher id</td>
-                <td><input type="text" th:field="*{publisher.idp}" /></td>
+                <td>Publisher</td>
+                <td>
+                    <select th:field="*{publisher}" class="form-control">
+                        <option th:each="publisher : ${publishers}" th:value="${publisher.idp}" th:text="${publisher.name}"></option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <td>Category id</td>
-                <td><input type="text" th:field="*{category.idc}" /></td>
+                <td>Category</td>
+                <td>
+                    <select th:field="*{category}" class="form-control">
+                        <option th:each="category : ${categories}" th:value="${category.idc}" th:text="${category.description}"></option>
+                    </select>
+                </td>
             </tr>
         </table>
         <button type="submit">Save</button>
