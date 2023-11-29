@@ -50,7 +50,11 @@ public class PublisherController {
 
     @GetMapping("/delete_publisher/{idp}")
     public String deletePublisher(@PathVariable(name = "idp") Long idp) {
-        publisherService.deleteById(idp);
-        return "redirect:/publishers_list";
+        if(publisherService.findById(idp).isPresent() && !publisherService.findById(idp).get().getBooks().isEmpty()) {
+            return "page500";
+        } else {
+            publisherService.deleteById(idp);
+            return "redirect:/publishers_list";
+        }
     }
 }

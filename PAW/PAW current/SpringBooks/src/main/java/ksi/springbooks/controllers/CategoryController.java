@@ -51,8 +51,12 @@ public class CategoryController {
 
     @RequestMapping("/delete_category/{idc}")
     public String deleteCategory(@PathVariable(name = "idc") Long idc) {
-        categoryService.deleteById(idc);
-        return "redirect:/categories_list";
+        if(categoryService.findById(idc).isPresent() && !categoryService.findById(idc).get().getBooks().isEmpty()) {
+            return "page500";
+        } else {
+            categoryService.deleteById(idc);
+            return "redirect:/categories_list";
+        }
     }
 
 }

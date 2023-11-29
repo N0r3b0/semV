@@ -11,6 +11,7 @@ public class Publisher {
     private Long idp;
     private String name;
     private String address;
+
     @OneToMany
     @JoinColumn(name="publisher_idp")
     private List<Book> books;
@@ -27,7 +28,6 @@ public class Publisher {
     public Long getIdp() {
         return idp;
     }
-
     public void setIdp(Long idb) {
         this.idp = idb;
     }
@@ -35,7 +35,6 @@ public class Publisher {
     public String getName() {
         return name;
     }
-
     public void setName(String title) {
         this.name = title;
     }
@@ -43,8 +42,14 @@ public class Publisher {
     public String getAddress() {
         return address;
     }
-
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
 }

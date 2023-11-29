@@ -25,7 +25,6 @@ public class Category {
     public Long getIdc() {
         return idc;
     }
-
     public void setIdc(Long idb) {
         this.idc = idb;
     }
@@ -33,8 +32,14 @@ public class Category {
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String title) {
         this.description = title;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
 }
