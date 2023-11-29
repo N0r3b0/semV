@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link th:href="@{/styles/form.css}" rel="stylesheet" />
+</head>
+<body>
+<div>
+    <h2>Sign in</h2>
+    <br />
+    <form action="#" th:action="@{/login}" method="post">
+        <table>
+            <tr>
+                <td>Login</td>
+                <td><input type="text" id="username" name="username"/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="password" name="password"/></td>
+            </tr>
+        </table>
+        <button type="submit">Login</button>
+    </form>
+</div>
+</body>
+</html>

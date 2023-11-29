@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Navbar</title>
     <style th:fragment="nav_style">
-        /* Dodaj odpowiednie style do dostosowania wyglądu nawigacji */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -37,6 +36,8 @@
     <a th:href="@{/books_list}">Books List</a>
     <a th:href="@{/categories_list}">Categories List</a>
     <a th:href="@{/publishers_list}">Publishers List</a>
+    <a sec:authorize="!isAuthenticated()" th:href="@{/login}">Login</a>
+    <a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
 </nav>
 
 </body>
