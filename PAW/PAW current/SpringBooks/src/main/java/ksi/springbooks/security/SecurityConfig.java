@@ -1,5 +1,7 @@
 package ksi.springbooks.security;
 
+import ksi.springbooks.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -12,9 +14,14 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
+import java.util.List;
+
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+    @Autowired
+    private UserService userService;
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
@@ -36,17 +43,17 @@ public class SecurityConfig {
     }
         @Bean
     UserDetailsService userDetailsService(){
-        UserDetails admin = User.builder()
-                .username("admin")
-                .password("$2a$12$1vNKd2FVGwSYi/Bu8nfS6OHApEgsEayDpbCotNjeEksipF0tQ3Vhm")
-                .roles("ADMIN")
-                .build();
-        UserDetails user = User.builder()
-                .username("user1")
-                .password("$2a$12$1vNKd2FVGwSYi/Bu8nfS6OHApEgsEayDpbCotNjeEksipF0tQ3Vhm")
-                .roles("USER")
-                .build();
-        return new InMemoryUserDetailsManager(admin, user);
+        List<ksi.springbooks.models.User> users = userService.findAll();
+        UserDetails[] usersDetails = new UserDetails[users.size()];
+        for(int i = 0; i < users.size(); i++)
+        {
+            usersDetails[i] = User.builder()
+                    .username(users.get(i).getUsername())
+                    .password(users.get(i).getPassword())
+                    .roles(users.get(i).getRole())
+                    .build();
+        }
+        return new InMemoryUserDetailsManager(usersDetails[0], usersDetails[1]);
     }
     @Bean
     public PasswordEncoder passwordEncoder() {
