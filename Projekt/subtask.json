@@ -1,0 +1,4 @@
+[
+    {"subtask_id": 1, "title": "Podzadanie 1", "description": "opis", "due_date": "2023-12-23", "is_completed": false},
+    {"subtask_id": 2, "title": "Podzadanie 2", "description": "opis", "due_date": "2023-12-24", "is_completed": false}
+]

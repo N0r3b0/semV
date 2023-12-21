@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net" modified="2023-12-20T23:26:51.754Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0" etag="A8LM6kxphhFeR9LP_Y82" version="22.1.11" type="device">
+  <diagram name="Strona-1" id="HKxKBT5rqTEsgTpYBSzC">
+    <mxGraphModel dx="1161" dy="638" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="d-wVs0No-MgAQdT3dUYt-2" target="d-wVs0No-MgAQdT3dUYt-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-2" value="Rejestracja użytkownika" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="220" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="d-wVs0No-MgAQdT3dUYt-3" target="d-wVs0No-MgAQdT3dUYt-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-3" value="Logowanie" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="220" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="d-wVs0No-MgAQdT3dUYt-5" target="d-wVs0No-MgAQdT3dUYt-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="414" y="50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d-wVs0No-MgAQdT3dUYt-5" target="d-wVs0No-MgAQdT3dUYt-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="d-wVs0No-MgAQdT3dUYt-5" target="d-wVs0No-MgAQdT3dUYt-69">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="d-wVs0No-MgAQdT3dUYt-71">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="605" y="480" as="targetPoint" />
+            <mxPoint x="413.5" y="250" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="414" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d-wVs0No-MgAQdT3dUYt-5" target="d-wVs0No-MgAQdT3dUYt-73">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="413.5" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-5" value="Przeglądanie listy zadań" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="338.5" y="220" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="d-wVs0No-MgAQdT3dUYt-7" target="d-wVs0No-MgAQdT3dUYt-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-7" value="Dodawanie zadania" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-14" value="Dodawanie notatki" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="110" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-66" value="Dodawanie podzadania" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="30" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-69" value="Przeglądanie statystyk" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="615" y="220" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-71" value="Archiwum zadań" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="420" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="d-wVs0No-MgAQdT3dUYt-73" target="d-wVs0No-MgAQdT3dUYt-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-73" value="Dodawanie grupy zadań" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="330" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="d-wVs0No-MgAQdT3dUYt-73" target="d-wVs0No-MgAQdT3dUYt-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="d-wVs0No-MgAQdT3dUYt-75" target="d-wVs0No-MgAQdT3dUYt-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-75" value="Dodawanie zadania" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="330" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d-wVs0No-MgAQdT3dUYt-76" value="Dodawanie podzadania" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="330" width="150" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

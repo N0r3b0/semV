@@ -13,6 +13,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
+import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
 import java.util.List;
 
@@ -23,13 +25,13 @@ public class SecurityConfig {
     @Autowired
     private UserService userService;
     @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    SecurityFilterChain securityFilterChain(HttpSecurity http, MvcRequestMatcher.Builder mvc) throws Exception {
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/books_list").permitAll()
-                        .requestMatchers("/new_book", "/edit_book/**", "/delete_book/**").hasAnyRole("USER", "ADMIN")
-                        .requestMatchers("categories_list", "/new_category", "/edit_category/**", "/delete_category/**").hasRole("ADMIN")
-                        .requestMatchers("publishers_list", "/new_publisher", "/edit_publisher/**", "/delete_publisher/**").hasRole("ADMIN")
+                        .requestMatchers(("/books_list")).permitAll()
+                        .requestMatchers(mvc.pattern("/new_book"), mvc.pattern("/edit_book/**"), mvc.pattern("/delete_book/**")).hasAnyRole("USER", "ADMIN")
+                        .requestMatchers(mvc.pattern("categories_list"), mvc.pattern("/new_category"), mvc.pattern("/edit_category/**"), mvc.pattern("/delete_category/**")).hasRole("ADMIN")
+                        .requestMatchers(mvc.pattern("publishers_list"), mvc.pattern("/new_publisher"), mvc.pattern("/edit_publisher/**"), mvc.pattern("/delete_publisher/**")).hasRole("ADMIN")
                         .anyRequest().permitAll())
                 .formLogin(form -> form
                         .loginPage("/login")
@@ -59,5 +61,11 @@ public class SecurityConfig {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+    @Bean
+    MvcRequestMatcher.Builder mvc(HandlerMappingIntrospector introspector) {
+        return new MvcRequestMatcher.Builder(introspector);
+    }
+
 
 }

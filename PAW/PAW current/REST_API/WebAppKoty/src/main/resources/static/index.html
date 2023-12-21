@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Information</title>
+</head>
+<body>
+
+<h1>Cat Information</h1>
+
+<!-- dodawanie kota -->
+<form id="addCatForm">
+    <label for="catName">Cat Name:</label>
+    <input type="text" id="catName" name="catName" required>
+
+    <label for="catBreed">Cat Breed:</label>
+    <input type="text" id="catBreed" name="catBreed" required>
+
+    <button type="submit">Add Cat</button>
+</form>
+
+<!-- lista kotów -->
+<br>
+<button id="fetchCatsButton">Fetch Cat Information</button>
+<div id="catInfo"></div>
+
+<script>
+    document.getElementById('addCatForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const catName = document.getElementById('catName').value;
+        const catBreed = document.getElementById('catBreed').value;
+
+        fetch('http://localhost:8080/cats', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name: catName, breed: catBreed }),
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then((data) => {
+                document.getElementById('catInfo').innerText = `Added Cat: ${data.name}, Breed: ${data.breed}`;
+            })
+            .catch((error) => {
+                console.error('Error adding cat:', error.message);
+                document.getElementById('catInfo').innerText = 'Error adding cat. Please try again.';
+            });
+    });
+
+    document.getElementById('fetchCatsButton').addEventListener('click', function() {
+        fetch('http://localhost:8080/cats')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then((data) => {
+                const catList = data.map(cat => `Cat Name: ${cat.name}, Breed: ${cat.breed}`).join('<br>');
+                document.getElementById('catInfo').innerHTML = catList;
+            })
+            .catch((error) => {
+                console.error('Error fetching cat information:', error.message);
+                document.getElementById('catInfo').innerText = 'Error fetching cat information. Please try again later.';
+            });
+    });
+</script>
+
+</body>
+</html>

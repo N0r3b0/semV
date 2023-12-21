@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "name": "Win32"
+        }
+    ],
+    "version": 4
+}
