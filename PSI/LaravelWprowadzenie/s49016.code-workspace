@@ -1,0 +1,9 @@
+{
+	"folders": [
+		{
+			"name": "SSH FS - foka",
+			"uri": "ssh://foka/home/s49016"
+		}
+	],
+	"settings": {}
+}
