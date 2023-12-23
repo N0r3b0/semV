@@ -8,7 +8,11 @@
             <a href="./dodaj_ksiazke">Dodaj książkę</a>   
             <a href="./dodaj_kategorie">Dodaj kategorię</a>  
             <a href="./dodaj_wydawnictwo">Dodaj wydawnicwtwo</a>            
-            <a href="./loguj">Zaloguj</a>     
+            @if(Auth::check())
+                <a href="./wyloguj">Wyloguj</a>
+            @else
+                <a href="./loguj">Zaloguj</a>
+            @endif
         </div>   
     </div> 
 </nav>
