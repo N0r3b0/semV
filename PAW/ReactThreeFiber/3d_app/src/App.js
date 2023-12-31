@@ -3,7 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { OrbitControls } from '@react-three/drei';
 import checker from './checker.png';
-import wood from './wood.png';
+import brick from './brick.png';
   
 
 // Funkcja pomocnicza do generowania losowych wartości
@@ -30,7 +30,7 @@ const CustomObject = ({ type, attributes }) => {
     attributes.depthSegments || 1
   );
 
-  const texture = new THREE.TextureLoader().load(wood);
+  const texture = new THREE.TextureLoader().load(brick);
   const material = new THREE.MeshPhongMaterial({
     map: texture,
     depthTest: true,

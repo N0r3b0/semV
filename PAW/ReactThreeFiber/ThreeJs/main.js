@@ -40,7 +40,7 @@ function createGeometryAndMaterial(type, attributes) {
     attributes.depthSegments || 1
   );
 
-  const texture = new THREE.TextureLoader().load('wood.png');
+  const texture = new THREE.TextureLoader().load('brick.png');
   const material = new THREE.MeshPhongMaterial({
     map: texture,
     depthTest: true,
