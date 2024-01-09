@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit category</title>
+    <link th:href="@{/styles/form.css}" rel="stylesheet" />
+</head>
+<body>
+
+<nav th:replace="navbar.html::nav"></nav>
+
+<div>
+    <h2>Edit category</h2>
+    <br />
+    <form action="#" th:action="@{/save_category}" th:object="${category}" method="post">
+        <table>
+            <tr>
+                <td>Category Id:</td>
+                <td><input type="text" th:field="*{idc}" readonly="readonly" /></td>
+                <!-- Dodaj ukryte pole do przekazania idc do kontrolera -->
+                <input type="hidden" th:field="*{idc}" />
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td><input type="text" th:field="*{description}" /></td>
+            </tr>
+        </table>
+        <button type="submit">Save</button>
+    </form>
+</div>
+
+</body>
+</html>

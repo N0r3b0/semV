@@ -33,6 +33,11 @@ CREATE TABLE todolist.Subtask (
     is_completed BOOLEAN
 );
 
+CREATE TABLE todolist.TaskSubTask (
+    subtask_id,
+    task_id INT REFERENCES todolist.Task(task_id),
+);
+
 CREATE TABLE todolist.Note (
     note_id SERIAL PRIMARY KEY,
     user_id INT REFERENCES todolist.User(user_id),

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new publisher</title>
+    <link th:href="@{/styles/form.css}" rel="stylesheet" />
+</head>
+<body>
+
+<nav th:replace="navbar.html::nav"></nav>
+
+<div>
+    <h2>Create new publisher</h2>
+    <br />
+    <form action="#" th:action="@{/save_publisher}" th:object="${publisher}" method="post">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" th:field="*{name}" /></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" th:field="*{address}" /></td>
+            </tr>
+        </table>
+        <button type="submit">Save</button>
+    </form>
+</div>
+
+</body>
+</html>
